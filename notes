@@ -1,0 +1,47 @@
+TITLE TBD
+    by: MAX MERGOTT
+
+You are a space ship that steered off course into a dense field of space rock. There is only one way to survive and thats through dodging the rock for as
+long as possible. Good luck.
+
+
+Have a space ship sprite that sits at the top of the screen always.
+Have a rock sprite that genrates in a random place at the bottom of the screen.
+Set the y to continuously go towards the top of the canvas. 
+Make the space ship controlable through WASD and Arrow keys.
+Add a timer to the top of the screen. 
+As the timer gets higher, the travel speed of the rocks increases
+
+
+
+*Eventually fix the movement to be smooth*
+
+Possibly add (a) power up(s) of some sort
+    -Gun that breaks the rock with a button/laser
+    -Shield that lasts for a certain amount of time
+    -Time slow (slows time for a certain length of seconds)
+
+
+        setTimeout(function(){
+        ctx.drawImage(rock2, rx2, ry2, rw, rh);
+        setInterval(function(){ctx.clearRect(rx2, ry2, rw+5, rh+5); ry2 = ry2 -5}, 50);
+        setInterval(function(){ry2 = ry2-5; ctx.drawImage(rock2, rx2, ry2, rw, rh)}, 50);},
+    Math.random()*2250);
+
+    setTimeout(function(){
+        ctx.drawImage(rock3, rx3, ry3, rw, rh);
+        setInterval(function(){ctx.clearRect(rx3, ry3, rw+5, rh+5); ry3 = ry3 -5}, 50);
+        setInterval(function(){ry3 = ry3-5; ctx.drawImage(rock3, rx3, ry3, rw, rh)}, 50);},
+    Math.random()*3000);
+
+    setTimeout(function(){
+        ctx.drawImage(rock4, rx4, ry4, rw, rh);
+        setInterval(function(){ctx.clearRect(rx4, ry4, rw+5, rh+5); ry4 = ry4 -5}, 50);
+        setInterval(function(){ry4 = ry4-5; ctx.drawImage(rock4, rx4, ry4, rw, rh)}, 50);},
+    Math.random()*3000);
+
+    setTimeout(function(){
+        ctx.drawImage(rock5, rx5, ry5, rw, rh);
+        setInterval(function(){ctx.clearRect(rx5, ry5, rw+5, rh+5); ry5 = ry5 -5}, 50);
+        setInterval(function(){ry5 = ry5-5; ctx.drawImage(rock5, rx5, ry5, rw, rh)}, 50);},
+    Math.random()*3000);
